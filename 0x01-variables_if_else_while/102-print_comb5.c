@@ -19,10 +19,10 @@ int main(void)
 		{
 			for (c = a; c < 10; c++)
 			{
-				if (a == 0 && b == 0)
-					num = 0;
-				else
+				if (a == c)
 					num = b + 1;
+				else
+					num = 0;
 				for (d = num; d < 10; d++)
 				{
 					if (((a == c) && (b == d)) || ((c == 0) && (d == 0)))
