@@ -15,7 +15,7 @@ int main(void)
 	{
 		for (a = (n + 1); a < 9; a++)
 		{
-			for (b = (n + 2); b < 10; b++)
+			for (b = (a + 1); b < 10; b++)
 			{
 				if ((n == a && n == b) || n == b || n == a || a == b)
 					continue;
