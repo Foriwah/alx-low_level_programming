@@ -20,7 +20,7 @@ int main(void)
 			{
 				for (d = 0; d < 10; d++)
 				{
-					if ((a == c) && (b == d))
+					if (((a == c) && (b == d)) || ((c == 0) && (d == 0)))
 						continue;
 					putchar(48 + a);
 					putchar(48 + b);
