@@ -11,6 +11,7 @@ int main(void)
 	int b;
 	int c;
 	int d;
+	int num;
 
 	for (a = 0; a < 10; a++)
 	{
@@ -18,7 +19,11 @@ int main(void)
 		{
 			for (c = a; c < 10; c++)
 			{
-				for (d = (b + 1); d < 10; d++)
+				if (a == 0 && b == 0)
+					num = 0;
+				else
+					num = b + 1;
+				for (d = num; d < 10; d++)
 				{
 					if (((a == c) && (b == d)) || ((c == 0) && (d == 0)))
 						continue;
