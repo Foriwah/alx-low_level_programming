@@ -20,19 +20,23 @@ int main(void)
 			{
 				for (d = 0; d < 10; d++)
 				{
-					putchar(48 + a);
-					putchar(48 + b);
-					putchar(' ');
-					putchar(48 + c);
-					putchar(48 + d);
-					if (c == 9 && d == 9 && a == 9 && b == 8)
+					if (a == 0 && b == 0 && c == 0 && d == 0)
 						continue;
 					else
 					{
-						putchar(',');
+						putchar(48 + a);
+						putchar(48 + b);
 						putchar(' ');
+						putchar(48 + c);
+						putchar(48 + d);
+						if (c == 9 && d == 9 && a == 9 && b == 8)
+							continue;
+						else
+						{
+							putchar(',');
+							putchar(' ');
+						}
 					}
-
 				}
 			}
 		}
