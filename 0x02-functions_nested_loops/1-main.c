@@ -7,6 +7,11 @@
 
 int main(void)
 {
-	print_alphabet_x10();
+	int r;
+
+	r = _islower('H');
+	_putchar(r + '0');
+	r = _islower('a');
+	_putchar(r + '0');
 	return (0);
 }
