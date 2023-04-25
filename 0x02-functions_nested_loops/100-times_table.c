@@ -26,13 +26,18 @@ void print_times_table(int n)
 				_putchar(' ');
 				_putchar(' ');
 			}
-			else if ((value >= 10) && (value <= 99))
+			else if ((value >= 10) && (value < 100))
+			{
 				_putchar(' ');
-			else
 				_putchar((value / 10) + '0');
-
+			}
+			else
+			{
+				_putchar((value / 100) + '0');
+				_putchar(((value / 10) % 10) + '0');
+			}
 			_putchar((value % 10) + '0');
 		}
-		_putchar('\n');
+	_putchar('\n');
 	}
 }
