@@ -24,6 +24,7 @@ void print_to_98(int n)
 				_putchar(' ');
 			}
 		}
+	}
 	else
 	{
 		for (b = n; b <= 98; b++)
