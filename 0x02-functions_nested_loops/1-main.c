@@ -9,9 +9,9 @@ int main(void)
 {
 	int r;
 
-	r = _islower('H');
+	r = _isalpha('H');
 	_putchar(r + '0');
-	r = _islower('a');
+	r = _isalpha('a');
 	_putchar(r + '0');
 	return (0);
 }
