@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
@@ -12,20 +13,17 @@ int main(void)
 	int temp;
 	int i;
 
-	_putchar(first + '0');
-	_putchar(',');
-	_putchar(' ');
-	_putchar(second + '0');
+	printf("%d, %d", first, second);
 
 	for (i = 0; i < 48; i++)
 	{
-		_putchar(',');
-		_putchar(' ');
+		putchar(',');
+		putchar(' ');
 		temp = first + second;
-		_putchar(temp + '0');
+		printf("%d", temp);
 		first = second;
 		second = temp;
 	}
-	_putchar('\n');
+	putchar('\n');
 	return (0);
 }
