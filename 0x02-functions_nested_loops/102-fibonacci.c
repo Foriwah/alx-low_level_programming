@@ -8,19 +8,18 @@
 
 int main(void)
 {
-	int first = 1;
-	int second = 2;
-	int temp;
-	int i;
+	long int first = 1;
+	long int second = 2;
+	long int temp;
+	int i = 2;
 
-	printf("%d, %d", first, second);
+	printf("%ld, %ld", first, second);
 
-	for (i = 0; i < 48; i++)
+	while (i < 50)
 	{
-		putchar(',');
-		putchar(' ');
-		temp = first + second;
-		printf("%d", temp);
+		temp =  second + first;
+		i++;
+		printf(", %ld", temp);
 		first = second;
 		second = temp;
 	}
