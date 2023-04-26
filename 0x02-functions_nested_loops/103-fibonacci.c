@@ -17,7 +17,7 @@ int main(void)
 	{
 		temp = first + second;
 		rem = temp % 2;
-		if(rem == 0)
+		if (rem == 0)
 			sum += temp;
 		first = second;
 		second = temp;
