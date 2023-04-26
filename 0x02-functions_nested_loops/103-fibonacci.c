@@ -7,19 +7,21 @@
 
 int main(void)
 {
-	long int sum = 2;
-	long int temp;
-	long int first = 1;
-	long int second = 2;
+	int rem;
+	int temp;
+	int sum = 0;
+	int first = 1;
+	int second = 2;
 
-	while (temp < 4000000)
+	while (temp <= 4000000)
 	{
 		temp = first + second;
-		if ((temp % 2) == 0)
-			sum = sum + temp;
+		rem = temp % 2;
+		if(rem == 0)
+			sum += temp;
 		first = second;
 		second = temp;
 	}
-	printf("%ld", sum);
+	printf("%d\n", sum + 2);
 	return (0);
 }
