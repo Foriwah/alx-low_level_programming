@@ -2,6 +2,7 @@
 #define MAIN_H
 
 int isupper(int character);
+int isdigit(int number);
 int _isupper(int c);
 int _isdigit(int c);
 int mul(int a, int b);
