@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 int _strlen(char *str);
-char *_strcpy(char *dest, char *src);
+char *_strcopy(char *dest, char *src);
 dog_t *new_dog(char *name, float age, char *owner);
 
 /**
@@ -17,17 +17,18 @@ int _strlen(char *str)
 
 	while (*str++)
 		len++;
+
 	return (len);
 }
 
 /**
- * _strcpy - copy a string
+ * _strcopy - copy a string
  * @dest: destination
  * @src: source
  * Return: a char
  */
 
-char *_strcpy(char *dest, char *src)
+char *_strcopy(char *dest, char *src)
 {
 	int count = 0;
 
@@ -67,9 +68,9 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(doggie);
 		return (NULL);
 	}
-	doggie->name = _strcpy(doggie->name, name);
+	doggie->name = _strcopy(doggie->name, name);
 	doggie->age = age;
-	doggie->owner = _strcpy(doggie->owner, owner);
+	doggie->owner = _strcopy(doggie->owner, owner);
 
 	return (doggie);
 }
