@@ -15,10 +15,10 @@ void print_all(const char * const format, ...);
 
 void print_char(va_list list)
 {
-	char c;
+	char alphabet;
 
-	c = va_arg(list, int);
-	printf("%c", c);
+	alphabet = va_arg(list, int);
+	printf("%c", alphabet);
 }
 /**
  * print_int - pointer function
@@ -42,7 +42,7 @@ void print_fl(va_list list)
 {
 	float value;
 
-	value = va_arg(list, float);
+	value = va_arg(list, double);
 	printf("%f", value);
 }
 
@@ -75,11 +75,11 @@ void print_all(const char * const format, ...)
 	va_list list;
 	int i = 0, j = 0;
 	char *separator = "";
-	prtn_t func[] = {
+	printer_t funcs[] = {
 		{"c", print_char},
 		{"i", print_int},
-		{"f", print_float},
-		{"s", print_string}
+		{"f", print_fl},
+		{"s", print_str}
 	};
 
 	va_start(list, format);
@@ -92,12 +92,12 @@ void print_all(const char * const format, ...)
 		if (j < 4)
 		{
 			printf("%s", separator);
-			funcs[j].print(args);
+			funcs[j].print(list);
 			separator = ", ";
 		}
 
 		i++;
 	}
 	printf("\n");
-	va_end(args);
+	va_end(list);
 }
