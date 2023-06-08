@@ -9,26 +9,26 @@
 
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int value = 0;
-	unsigned int k = 1;
-	unsigned int len = 0;
-	int counter;
+	unsigned int value;
 
 	while (b[len] != '\0')
 		len++;
 	if (b == NULL)
 		return (0);
-	for (counter = len - 1; counter >= 0; counter--)
+	for (value = 0; *b != 0; b++)
 	{
-		if (b[counter] != 48 && b[counter] != 49)
-			return (0);
-		if (b[counter] == 49 || b[counter] == 48)
+		if (*b == '0')
 		{
-			value = value + k;
+			value = value << 1;
+		}
+		else if (*b == '1')
+		{
+			value = value << 1;
 		}
 		else
+		{
 			return (0);
-		k = k * 2;
+		}
 	}
 	return (value);
 }
