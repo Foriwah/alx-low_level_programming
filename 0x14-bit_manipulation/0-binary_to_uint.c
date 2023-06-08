@@ -22,10 +22,12 @@ unsigned int binary_to_uint(const char *b)
 	{
 		if (b[counter] != 48 && b[counter] != 49)
 			return (0);
-		if (b[counter] == 49)
+		if (b[counter] == 49 || b[counter] == 48)
 		{
 			value = value + k;
 		}
+		else
+			return (0);
 		k = k * 2;
 	}
 	return (value);
