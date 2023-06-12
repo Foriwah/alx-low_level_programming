@@ -29,6 +29,7 @@ int append_text_to_file(const char *filename, char *text_content)
 			len++;
 		length = write(myfile, text_content, len);
 	}
-	close(myfile);
+	if (close(myfile) == -1)
+		return (-1);
 	return (length == len ? 1 : -1);
 }
