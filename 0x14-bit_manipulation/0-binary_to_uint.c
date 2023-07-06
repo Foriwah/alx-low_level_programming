@@ -18,7 +18,7 @@ unsigned int binary_to_uint(const char *b)
 		return (0);
 	while (b[len] != '\0')
 		len++;
-	for (count = len -1; count >= 0; count--)
+	for (count = len - 1; count >= 0; count--)
 	{
 		if (b[count] != 49 && b[count] != 48)
 			return (0);
